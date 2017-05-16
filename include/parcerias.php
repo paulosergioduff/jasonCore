@@ -1,0 +1,5 @@
+<?php
+
+echo "Nossos Parceiros";
+
+?>
