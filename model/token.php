@@ -7,7 +7,7 @@ Use este token para prevenir acesso indevido ao banco de dados, em requisições
 */
 session_start();
 //$_SESSION['padrao'] = 'sessao_iniciada';
-$tokenPadrao        = sha1($_SESSION['login']);
+$tokenPadrao        = sha1($_SESSION['status']);
 $tokenExterno       = sha1('sessao_iniciada');
 function tokenReprovado()
 {
