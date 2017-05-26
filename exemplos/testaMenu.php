@@ -16,7 +16,6 @@ $crud      = crud::getInstance(Conexao::getInstance());
 /*  
  * Variáveis contendo os valores para serem inseridos no banco de dados  
  */
-//$crud->delete(17);
 $dadosMenu = $crud->getAlltabela('menu'); // para todos da tabela
 foreach ($dadosMenu as $reg):
                                 $idMenu   = $reg->id;
