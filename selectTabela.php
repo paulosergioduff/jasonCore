@@ -16,7 +16,6 @@ $crud  = crud::getInstance(Conexao::getInstance());
 /*  
  * Variáveis contendo os valores para serem inseridos no banco de dados  
  */
-//$crud->delete(17);
 $dados = $crud->getAlltabela($dbTabela); // para todos da tabela
 if ($controleSelectTotal = true) {
         if ($controleSelectTotal != false) {
@@ -24,7 +23,7 @@ if ($controleSelectTotal = true) {
                 foreach ($dados as $reg):
                         $id        = $reg->id;
                         $varchar1  = $reg->varchar1;
-                        $$varchar2 = $reg->varchar2;
+                        $varchar2 = $reg->varchar2;
                         retornaSelectTotal($id, $varchar1, $$varchar2); // Função que retorna visualmente na tela os dados
                 endforeach;
                 echo ' 

@@ -10,14 +10,14 @@ session_start();
 
 $_SESSION['padrao'] = 'mundo';
 
-$login = htmlspecialchars(addslashes('FinalnovffoUsuarioFiltrado'));  
-$email  = htmlspecialchars(addslashes('novoemail@gmailc.om'));  
-$senha   = htmlspecialchars(addslashes('123456789')); // usando bcrypt
-$tabela = htmlspecialchars(addslashes('usuario2')); 
-$valor1 = htmlspecialchars(addslashes('mais1@mail.com')); ;
-$valor2 = htmlspecialchars(addslashes('valor 2')); 
+$login = htmlspecialchars(addslashes('kkkkandoNovoDadoInserido'));  
+$email  = htmlspecialchars(addslashes('kkkil@gmailc.om'));  
+$senha   = htmlspecialchars(addslashes('kkk6789')); // usando bcrypt
+$tabela = htmlspecialchars(addslashes('kkk2usuario2')); 
+$valor1 = htmlspecialchars(addslashes('kkkSmais1@mail.com')); ;
+$valor2 = htmlspecialchars(addslashes('kkkkkalor')); 
 
-$dbTabela = 'tabela';  // Indica ao CRUD, que tabela sofrerá alteração na query
+$dbTabela = 'cadastro';  // Indica ao CRUD, que tabela sofrerá alteração na query
 
 
    ?>

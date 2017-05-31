@@ -6,7 +6,7 @@ Pequeno exemplo para autenficação com login
 */
 session_start();
 echo "<p>acesso permitido";
-$_SESSION['login'] = "sessao_iniciada";
+$_SESSION['status'] = "sessao_iniciada";
 echo "<br>" . $_SESSION['login'];
 $_SESSION['permissao'] = 'adm';
 if (isset($_SESSION['permissao'])) {

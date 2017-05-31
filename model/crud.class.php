@@ -89,7 +89,7 @@ class crud
                 {
                                 if (!empty($id)):
                                                 try {
-                                                                $sql = "DELETE FROM tabela WHERE id=?";
+                                                                $sql = "DELETE FROM $dbTabela WHERE id=?";
                                                                 $stm = $this->pdo->prepare($sql);
                                                                 $stm->bindValue(1, $id);
                                                                 $stm->execute();

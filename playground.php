@@ -8,7 +8,7 @@ require_once "view/viewsRetornos.php";
 $crud = crud::getInstance(Conexao::getInstance());
 // Para testes, remova os comentários abaixo.
 //$crud->update($login, $email, $senha, $valor1, $valor2, '10', $dbTabela);
-//$crud->insert($login, $email, $senha, $valor1, $valor2, $tabela, $dbTabela);
-$crud->delete('11', $dbTabela);
+$crud->insert($login, $email, $senha, $valor1, $valor2, $tabela, $dbTabela);
+//$crud->delete('1', $dbTabela);
 //phpinfo();
 ?>

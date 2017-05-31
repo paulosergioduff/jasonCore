@@ -1,5 +1,4 @@
  <?php
-error_reporting(0);
 /*  
  * Require nos scripts necessários  
  */
@@ -16,25 +15,22 @@ $crud      = crud::getInstance(Conexao::getInstance());
 /*  
  * Variáveis contendo os valores para serem inseridos no banco de dados  
  */
-//$crud->delete(17);
-$dadosMenu = $crud->getAlltabela('menu'); // para todos da tabela
-foreach ($dadosMenu as $reg):
-                                $idMenu   = $reg->id;
-                                $roleta   = $idMenu;
-                                $nomeMenu = $reg->nome;
-                                echo "<ur>" . $nomeMenu . " - ID:$idMenu<br>";
-                                ############### LISTANDO OPÇÕES DO MENU  #####################
-                                $dadosOpcoes = $crud->getAlltabela('opcoes'); // Seleciona todas as oppões de menu                 
-                                foreach ($dadosOpcoes as $opc):
-                                                                $conteudoOpcao = $opc->opcao;
-                                                                $idOpcao       = $opc->menu;
-                                                                if ($idMenu == $idOpcao) { // Verifica o código associado aquele menu. Se for o menu da exibição atual, ele exibe a saída. 
-                                                                                                echo "<li>" . $conteudoOpcao . " pertencente à Menu$idOpcao </li><br>";
-                                                                                                echo "<ul>Submenu<br><li>Subitem 1</li> <li>Subitem2</li></ul></u>";
-                                                                }
-                                endforeach;
-#########################
-                                
-//echo "<br>fim do Menu$id<br></ur>";
-endforeach;
-?>
+$dados = $crud->getAlltabela('menu'); // para todos da tabela
+  if ($controleSelectTotal = true) {
+     if ($controleSelectTotal != false) {
+       foreach ($dados as $reg): 
+       $id = $reg->id ;
+       
+
+                        $menus = $crud->selecionaId("$reg->id", 'menu'); 
+                
+                                foreach ($menus as $regMenu): 
+                                 echo $tagInicio = $regMenu->tagInicio;
+                                 echo $nome = $regMenu->nome ;
+                                 echo $tagFim = $regMenu->tagFim;
+                                 endforeach;                                    
+       
+       endforeach; 
+        } 
+  }
+ ?>
