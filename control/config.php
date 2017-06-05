@@ -1,7 +1,7 @@
  <?php
 /* Constantes de parâmetros para configuração da conexão   
  */
-require_once('model/token.php'); // Evita acesso indesejado externo
+//require_once('model/token.php'); // Evita acesso indesejado externo
 $caminho = 'http://localhost/novoMVC/areaDeTrabalho/';
 define('SERVIDOR', 'localhost');
 define('NOMEDB', 'abstrato');
