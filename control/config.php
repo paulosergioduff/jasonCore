@@ -1,8 +1,6 @@
  <?php
 /* Constantes de parâmetros para configuração da conexão   
  */
-//nrequire_once('model/token.php'); // Evita acesso indesejado externo testando mudança de branch
-$caminho = 'http://localhost/novoMVC/areaDeTrabalho/';
 define('SERVIDOR', 'localhost');
 define('NOMEDB', 'abstrato');
 define('CHARSET', 'utf8');
