@@ -22,6 +22,7 @@ session_start();
 function auntentificado() // Função que permite criação de regra de negócio para acesso do microframework com autenficação
 {
         echo "<p>acesso permitido";
+        $_SESSION['status'] = "sessao_iniciada";
        
        }
 function acessoNegado() // Permite criar algoritimo para negar a autenficação.
