@@ -1,9 +1,9 @@
-<?php error_reporting(0);
+<?php 
 // Página para uso de testes (playground.php)
 // includes necessárias para uso do exemplo
 require_once "installJason.php";
 
-$crud = crud::getInstance(Conexao::getInstance());
+$crud = crud::getInstance(Conexao::getInstanceMultiton());
 /*  
  * Variáveis contendo os valores para serem inseridos no banco de dados  
  */

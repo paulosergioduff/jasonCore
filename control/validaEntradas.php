@@ -10,7 +10,7 @@ session_start();
 
 $_SESSION['padrao'] = 'mundo';
 
-$login = htmlspecialchars(addslashes('filtro3'));  
+$login = htmlspecialchars(addslashes('filtro5'));  
 $email  = htmlspecialchars(addslashes('kkkil@gmailc.om'));  
 $senha   = htmlspecialchars(addslashes('kkk6789')); // usando bcrypt
 $tabela = htmlspecialchars(addslashes('filtro')); 
