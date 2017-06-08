@@ -2,12 +2,7 @@
 /*  
  * Require nos scripts necessários  
  */
-require_once "../control/config.php";
-require_once "../control/controleCentral.php";
-require_once "../control/validaEntradas.php";
-require_once "../model/crud.class.php";
-require_once "../view/viewsRetornos.php";
-/*  
+require_once "installJason.php";/*  
  * Atribui uma instância da classe crud   
  * e passa uma conexão como parâmetro  
  */
