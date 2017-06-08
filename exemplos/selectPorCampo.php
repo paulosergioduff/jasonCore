@@ -1,9 +1,9 @@
-<?php 
+<?php header ('Content-type: text/html; charset=UTF-8');
 // Página para uso de testes (playground.php)
 // includes necessárias para uso do exemplo
 require_once "installJason.php";
 
-$crud = crud::getInstance(Conexao::getInstanceMultiton());
+$crud = crud::getInstance(Conexao::getInstanceMultiton('abstrato'));
 /*  
  * Variáveis contendo os valores para serem inseridos no banco de dados  
  */
