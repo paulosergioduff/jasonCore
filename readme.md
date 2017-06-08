@@ -99,6 +99,27 @@ $dados = $crud->selecionaId('numero_id', $dbTabela);
       ]}';
   }
 ```
+
+### SELECT DE UM CAMPO:
+```PHP
+$campo = 'termoDeBusca'; 
+$coluna = 'campoSelecionado';
+
+$dados = $crud->selecionaCampo($dbTabela);
+if ($controleSelect != false) {
+                foreach ($dados as $reg):
+                                
+                                $filtro = $reg->$coluna;
+                                  if ($filtro == $campo) {
+                                    echo $id        = $reg->id . "<br>";
+                                echo $varchar1  = $reg->varchar1 . "<br>";
+                                echo $varchar2 = $reg->varchar2 . "<br>";
+                                  }
+                                
+                endforeach;
+               ;
+}
+```
 ### TABELA A SER USADA:
 ```SQL
 CREATE TABLE IF NOT EXISTS `tabela` (
