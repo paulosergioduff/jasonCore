@@ -4,12 +4,7 @@
 /*  
  * Require nos scripts necessários  
  */
-require_once "../control/config.php";
-require_once "../control/controleCentral.php";
-require_once "../control/validaEntradas.php";
-require_once "../model/crud.class.php";
-require_once "../view/viewsRetornos.php";
-/*  
+require_once "installJason.php";/*  
  * Atribui uma instância da classe crud   
  * e passa uma conexão como parâmetro  
  */
@@ -17,11 +12,14 @@ $crud = crud::getInstance(Conexao::getInstance());
 /*  
  * Variáveis contendo os valores para serem inseridos no banco de dados  
  */
-session_start();
+    if (!isset($_SESSION['status'])) { // Verifica se a sessão já foi iniciada. Se a variável não estiver sido setada, inicia  a sessão.
+       session_start();
+    }
 // Funções para reagir a autenficação
 function auntentificado() // Função que permite criação de regra de negócio para acesso do microframework com autenficação
 {
         echo "<p>acesso permitido";
+        $_SESSION['status'] = "sessao_iniciada";
        
        }
 function acessoNegado() // Permite criar algoritimo para negar a autenficação.

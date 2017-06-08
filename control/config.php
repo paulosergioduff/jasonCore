@@ -1,8 +1,6 @@
  <?php
 /* Constantes de parâmetros para configuração da conexão   
  */
-//nrequire_once('model/token.php'); // Evita acesso indesejado externo testando novidade
-$caminho = 'http://localhost/novoMVC/areaDeTrabalho/';
 define('SERVIDOR', 'localhost');
 define('NOMEDB', 'abstrato');
 define('CHARSET', 'utf8');
@@ -41,6 +39,27 @@ class Conexao
                         }
                 }
                 return self::$pdo;
+        }
+
+           public static function getInstanceMultiton($novoBanco)
+        {
+                
+                       
+                        try {
+                                $opcoes    = array(
+                                        PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES UTF8',
+                                        PDO::ATTR_PERSISTENT => TRUE
+                                );
+                                self::$pdo = new PDO("mysql:host=" . SERVIDOR . "; dbname=" . $novoBanco . "; charset=" . CHARSET . ";", USUARIO, SENHA, $opcoes);
+                                self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                        }
+                        catch (PDOException $e) {
+                                print "Erro: " . $e->getMessage();
+                        }
+                
+                return self::$pdo;
+                
+                
         }
 }
 

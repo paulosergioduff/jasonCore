@@ -12,5 +12,5 @@ if (isset($_SESSION['status'])) {
 } else {
 				echo "sem acesso";
 }
-echo "<br><a href='logar.php'>Logar</a><a href='logout.php'>  deslogar</a><a href='restrito.php'>  Restrito</a>";
+echo "<a href='logout.php'>  deslogar</a><a href='restrito.php'>  Restrito</a>";
 ?>
