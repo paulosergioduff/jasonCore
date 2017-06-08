@@ -1,4 +1,4 @@
- <?php
+ <?php 
 /*  
  * Require nos scripts necessários  
  */
@@ -19,7 +19,7 @@ if ($controleSelectTotal = true) {
                         $id        = $reg->id;
                         $varchar1  = $reg->varchar1;
                         $varchar2 = $reg->varchar2;
-                        retornaSelectTotal($id, $varchar1, $$varchar2); // Função que retorna visualmente na tela os dados
+                        retornaSelectTotal($id, $varchar1, $varchar2); // Função que retorna visualmente na tela os dados
                 endforeach;
                 echo ' 
 {

@@ -131,4 +131,17 @@ class crud
                                                 echo "<script>alert('Erro na linha: {$erro->getLine()}')</script>";
                                 }
                 }
+                public function selecionaCampo($dbTabela)
+                {
+                                   try {
+                                                $sql = "SELECT * FROM $dbTabela";
+                                                $stm = $this->pdo->prepare($sql);
+                                                $stm->execute();
+                                                $dados = $stm->fetchAll(PDO::FETCH_OBJ);
+                                                return $dados;
+                                }
+                                catch (PDOException $erro) {
+                                                echo "<script>alert('Erro na linha: {$erro->getLine()}')</script>";
+                                }
+                }
 }
