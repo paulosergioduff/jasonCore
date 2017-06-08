@@ -5,18 +5,18 @@ function json(){
 
 	// Resgatar valores.
 	json.prototype.resgatarValores = function(){
-		$('#resultado').html('Carregando usuarios...');
+		$('#resultado').html('Carregando dados...');
 
 		// Estrutura de resultado.
-		$.getJSON('arquivo.json', function(data){
+		$.getJSON('http://localhost/jasonCore/exemplos/selectTabela.php', function(data){
 			// servidor http://localhost/jasonCore/exemplos/selectTabela.php
-			this.qtd = data.usuarios.length;
+			this.qtd = data.dados.length;
 			this.retorno = '';
 
 			for (i = 0; i < this.qtd; i++){
-				this.retorno += 'ID: ' + data.usuarios[i].id + '<br />';
-				this.retorno += 'nome: ' + data.usuarios[i].nome + ' - ';
-				this.retorno += 'cidade: ' + data.usuarios[i].cidade + '<br /><br />';
+				this.retorno += 'ID: ' + data.dados[i].id + '<br />';
+				this.retorno += 'Categoria: ' + data.dados[i].Categoria + ' - ';
+				this.retorno += 'cidade: ' + data.dados[i].cidade + '<br /><br />';
 			}
 
 			$('#resultado').html(this.retorno);
