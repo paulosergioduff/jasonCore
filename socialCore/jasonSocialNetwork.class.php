@@ -25,12 +25,12 @@ Class JasonPost extends Post
 			echo "Implementado!";
 
 		}
-	public function send_Mensage($protocol, $serverOrigin, $serverDestiny, $type, $autor, $mensage)
+	public function send_Menssage($protocol, $serverOrigin, $serverDestiny, $type, $autor, $menssage)
 	{
 			echo "Implementado!";
 
 		}
-	public function update_inbox($protocol, $serverOrigin, $serverDestiny, $type, $autor, $mensage)
+	public function update_inbox($protocol, $serverOrigin, $serverDestiny, $type, $autor, $menssage)
 	{
 			echo "Implementado!";
 

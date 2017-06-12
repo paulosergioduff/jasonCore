@@ -11,7 +11,7 @@ interface RedeSocial
 {
 				public function cadastrar($nomeDeUsuario, $senha);
 				public function compartilhar($titulo, $conteudo, $resumo);
-				public function mensagemParticular($mensagem, $destino);
+				public function menssagemParticular($menssagem, $destino);
 				public function bloquear($usuario, $motivo);
 				public function comentar($comentario);
 				public function resposta($resposta);
@@ -38,9 +38,9 @@ class AcaoRedeSocial implements RedeSocial
 								echo "<br><div id='conteudo' class='ajusteGeral'>$conteudo</div>";
 								echo "<br><div id='resumo' class='ajusteGeral'>$resumo</div>";
 				}
-				public function mensagemParticular($mensagem, $destino)
+				public function menssagemParticular($menssagem, $destino)
 				{
-								echo "<br><div id='mensagemParticular' class='ajusteGeral'>$mensagem</div>";
+								echo "<br><div id='menssagemParticular' class='ajusteGeral'>$menssagem</div>";
 								echo "<br><div id='destino' class='ajusteGeral'>$destino</div>";
 				}
 				public function bloquear($usuario, $motivo)

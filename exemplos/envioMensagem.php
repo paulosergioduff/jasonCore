@@ -1,7 +1,7 @@
 <?php 
 // Página para uso de testes (playground.php)
 // includes necessárias para uso do exemplo
-require_once "installJason.php";
+require_once "../installJason.php";
 
 require_once "../socialCore/post.class.php";
 
@@ -16,12 +16,13 @@ $postagem = new JasonPost();
 
 $protocolo = 'https';
 $servidorDeOrigem = 'jasonBD';
-$servidorDeDestino = 'mensage';
+$servidorDeDestino = 'menssage';
 $tipo = 'multitonPDO';
 $autor = 'Paulo Sérgio Duff';
-$mensagem = 'Terceira mensagem';
+$menssagem = 'Sétima menssagem';
 
-$postagem->send_Mensage($protocolo, $servidorDeOrigem, $servidorDeDestino , $tipo, $autor, $mensagem);
+$postagem->send_Menssage($protocolo, $servidorDeOrigem, $servidorDeDestino , $tipo, $autor, 'Quarta menssagem');
+
 
 
 

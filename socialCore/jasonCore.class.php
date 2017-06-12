@@ -2,8 +2,8 @@
 interface JasonCore
 {
 				/*public function dataAccess($protocol, $type, $server, $dataBase, $user, $password); // Conection to data base*/
-				public function send_Mensage($protocol, $serverOrigin, $serverDestiny, $type, $autor, $mensage);
-				public function update_inbox($protocol, $serverOrigin, $serverDestiny, $type, $autor, $mensage);
+				public function send_Menssage($protocol, $serverOrigin, $serverDestiny, $type, $autor, $menssage);
+				public function update_inbox($protocol, $serverOrigin, $serverDestiny, $type, $autor, $menssage);
 }
 abstract Class WhiteList implements JasonCore
 {
@@ -51,8 +51,8 @@ abstract Class PrivatePost implements JasonCore
 {
 				private $author;
 				private $destiny;
-				public abstract function send_Mensage($protocol, $serverOrigin, $serverDestiny, $type, $autor, $mensage);
-				public abstract function update_inbox($protocol, $serverOrigin, $serverDestiny, $type, $autor, $mensage);
+				public abstract function send_Menssage($protocol, $serverOrigin, $serverDestiny, $type, $autor, $menssage);
+				public abstract function update_inbox($protocol, $serverOrigin, $serverDestiny, $type, $autor, $menssage);
 				public abstract function status();
 }
 ?>

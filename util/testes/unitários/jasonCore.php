@@ -2,7 +2,7 @@
 
 interface JasonCore{
 	public function dataAccess($type,$server,$dataBase,$user,$password);
-	public function sendMensage($serverOrigin, $serverDestiny, $type, $autor, $mensage);
+	public function sendMenssage($serverOrigin, $serverDestiny, $type, $autor, $menssage);
 	public function vote($type, $valueVote);
 }
 
@@ -18,7 +18,7 @@ abstract Class JasonSN implements jasonCore{ // JasonSN - Jason Social Network
 			
 		}
 
-		public function sendMensage($serverOrigen, $serverDestiny, $type, $autor, $mensage){
+		public function sendMenssage($serverOrigen, $serverDestiny, $type, $autor, $menssage){
 
 		}
 		public function vote($type, $valueVote){
