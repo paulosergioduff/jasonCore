@@ -47,7 +47,7 @@ class crud
                                                                 $stm->bindValue(5, $valor2);
                                                                 $stm->bindValue(6, $tabela);
                                                                 $stm->execute();
-                                                                //retornoInsert();
+                                                                retornoInsert();
                                                 }
                                                 catch (PDOException $erro) {
                                                                 echo "<script>alert('Erro na linha: {$erro->getLine()}')</script>";

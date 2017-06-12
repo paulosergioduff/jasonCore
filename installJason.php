@@ -10,6 +10,7 @@ define("MODEL", "model");
 define("VIEW", "view");
 
 define("CORE", "core");
+define("AUX", "aux");
 
 
 require_once($_SERVER['DOCUMENT_ROOT']."/".PATHINSTALL."/".CONTROL."/config.php");
@@ -20,6 +21,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/".PATHINSTALL."/".VIEW."/viewsRetornos.
 
 require_once($_SERVER['DOCUMENT_ROOT']."/".PATHINSTALL."/".CORE."/jasonCore.class.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/".PATHINSTALL."/".CORE."/jasonSocialNetwork.class.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/".PATHINSTALL."/".AUX."/functions.php");
 
 
 ?>

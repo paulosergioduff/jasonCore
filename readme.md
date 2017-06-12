@@ -33,7 +33,7 @@ require_once "control/validaEntradas.php";
 require_once "model/crud.class.php"; 
 require_once "view/viewsRetornos.php";
 
-$crud = crud::getInstance(Conexao::getInstance());
+$crud = crud::getInstance(Conexao::getInstance()); // Use esse código para multistância de DB: $crud = crud::getInstance(Conexao::getInstanceMultiton('seuBanco'));
 
 $crud->suaFuncaoDaQuery($campo1, $campo2, $campo3);
 // Seja feliz!
