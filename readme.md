@@ -23,15 +23,12 @@
   - Uso de URL amigáveis pré-configuradas no arquivo .htaccess.zip (arquivo oculto)
 
 ### Como utilizar:
-O arquivo /config/config.php configura o acesso ao banco de dados. O arquivo /model/abstrato_membros_menu.sql contém a  tabela para utilização do banco de dados. Após o banco de dados estar configurado, vá em /exemplos/logar.php para ativar o token. Assim outros arquivos de exemplos, e testes de consulta selectPorId.php e selectTabela.php será possível realizar os testes. Para autentificação de sessão, os arquivos autentifica.php; logar.php; logout.php e restrito.php na pasta exemplo, pode ajudar a construir o seu sistema.  Use o arquivo playground.php na pasta raiz para testar scripts, e o arquivo matriz.html na pasta view para criar layouts. Após escolher os recursos para criar o seu sistema, ignore as pastas exemplos, util e jquery-json (apague-as). Nomeie os campos do arquivo abstrato_membros_menu.sql e trabalhe nessa mudança no arquivo /model/crud.class.php (não necessário para criação de protótipos).  
+O arquivo /config/config.php configura o acesso ao banco de dados. O arquivo /model/jasonBD.sql contém a  tabela para utilização do banco de dados. Após o banco de dados estar configurado, vá em /exemplos/logar.php para ativar o token. Assim outros arquivos de exemplos, e testes de consulta selectPorId.php e selectTabela.php será possível realizar os testes. Para autentificação de sessão, os arquivos autentifica.php; logar.php; logout.php e restrito.php na pasta exemplo, pode ajudar a construir o seu sistema.  Use o arquivo playground.php na pasta raiz para testar scripts, e o arquivo matriz.html na pasta view para criar layouts. Após escolher os recursos para criar o seu sistema, ignore as pastas exemplos, util e jquery-json (apague-as). Nomeie os campos do arquivo abstrato_membros_menu.sql e trabalhe nessa mudança no arquivo /model/crud.class.php (não necessário para criação de protótipos).  
 
 ### Códigos de exemplo
 ```php
 <?php 
-require_once "control/config.php";   
-require_once "control/validaEntradas.php";
-require_once "model/crud.class.php"; 
-require_once "view/viewsRetornos.php";
+require_once "../installJason.php";
 
 $crud = crud::getInstance(Conexao::getInstance()); // Use esse código para multistância de DB: $crud = crud::getInstance(Conexao::getInstanceMultiton('seuBanco'));
 

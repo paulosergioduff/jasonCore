@@ -36,9 +36,9 @@ abstract Class Post implements JasonCore
 				public $value;
 				public $author;
 				public $destiny;
-				public abstract function post_feed($type, $value, $author, $destiny);
-				public abstract function post_comment($type, $value, $author, $destiny);
-				public abstract function post_in_page($type, $value, $author, $destiny);
+				public abstract function post_feed($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage);
+				public abstract function post_comment($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage);
+				public abstract function post_in_page($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage);
 }
 abstract Class React implements JasonCore
 {

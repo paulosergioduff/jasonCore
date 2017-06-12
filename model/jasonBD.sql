@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 26-Maio-2017 às 22:11
+-- Generation Time: 12-Jun-2017 às 21:13
 -- Versão do servidor: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `abstrato`
+-- Database: `jasonBD`
 --
 
 -- --------------------------------------------------------
@@ -73,6 +73,80 @@ INSERT INTO `cadastro` (`id`, `varchar1`, `varchar2`, `varchar3`, `varchar4`, `v
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `comment_post`
+--
+
+CREATE TABLE `comment_post` (
+  `id` int(11) NOT NULL,
+  `varchar1` varchar(255) NOT NULL,
+  `varchar2` varchar(255) NOT NULL,
+  `varchar3` varchar(255) NOT NULL,
+  `varchar4` varchar(255) NOT NULL,
+  `varchar5` varchar(255) NOT NULL,
+  `num1` int(11) NOT NULL,
+  `num2` int(11) NOT NULL,
+  `num3` int(11) NOT NULL,
+  `num4` int(11) NOT NULL,
+  `num5` int(11) NOT NULL,
+  `data1` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `data2` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `data3` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `data4` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `data5` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `bit1` int(1) NOT NULL,
+  `bit2` int(1) NOT NULL,
+  `bit3` int(1) NOT NULL,
+  `bit4` int(1) NOT NULL,
+  `bit5` int(1) NOT NULL,
+  `texto1` longtext NOT NULL,
+  `texto2` longtext NOT NULL,
+  `texto3` longtext NOT NULL,
+  `texto4` longtext NOT NULL,
+  `texto5` longtext NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `tabela` varchar(255) CHARACTER SET latin1 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `feed`
+--
+
+CREATE TABLE `feed` (
+  `id` int(11) NOT NULL,
+  `varchar1` varchar(255) NOT NULL,
+  `varchar2` varchar(255) NOT NULL,
+  `varchar3` varchar(255) NOT NULL,
+  `varchar4` varchar(255) NOT NULL,
+  `varchar5` varchar(255) NOT NULL,
+  `num1` int(11) NOT NULL,
+  `num2` int(11) NOT NULL,
+  `num3` int(11) NOT NULL,
+  `num4` int(11) NOT NULL,
+  `num5` int(11) NOT NULL,
+  `data1` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `data2` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `data3` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `data4` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `data5` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `bit1` int(1) NOT NULL,
+  `bit2` int(1) NOT NULL,
+  `bit3` int(1) NOT NULL,
+  `bit4` int(1) NOT NULL,
+  `bit5` int(1) NOT NULL,
+  `texto1` longtext NOT NULL,
+  `texto2` longtext NOT NULL,
+  `texto3` longtext NOT NULL,
+  `texto4` longtext NOT NULL,
+  `texto5` longtext NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `tabela` varchar(255) CHARACTER SET latin1 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `membros`
 --
 
@@ -89,6 +163,43 @@ CREATE TABLE `membros` (
 
 INSERT INTO `membros` (`id`, `login`, `senha`, `permissao`) VALUES
 (1, 'root', '1234', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `menssage`
+--
+
+CREATE TABLE `menssage` (
+  `id` int(11) NOT NULL,
+  `varchar1` varchar(255) NOT NULL,
+  `varchar2` varchar(255) NOT NULL,
+  `varchar3` varchar(255) NOT NULL,
+  `varchar4` varchar(255) NOT NULL,
+  `varchar5` varchar(255) NOT NULL,
+  `num1` int(11) NOT NULL,
+  `num2` int(11) NOT NULL,
+  `num3` int(11) NOT NULL,
+  `num4` int(11) NOT NULL,
+  `num5` int(11) NOT NULL,
+  `data1` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `data2` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `data3` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `data4` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `data5` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `bit1` int(1) NOT NULL,
+  `bit2` int(1) NOT NULL,
+  `bit3` int(1) NOT NULL,
+  `bit4` int(1) NOT NULL,
+  `bit5` int(1) NOT NULL,
+  `texto1` longtext NOT NULL,
+  `texto2` longtext NOT NULL,
+  `texto3` longtext NOT NULL,
+  `texto4` longtext NOT NULL,
+  `texto5` longtext NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `tabela` varchar(255) CHARACTER SET latin1 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -123,6 +234,43 @@ INSERT INTO `menu` (`id`, `nome`, `link`, `hover`, `class`, `tagInicio`, `tagFim
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `modelo`
+--
+
+CREATE TABLE `modelo` (
+  `id` int(11) NOT NULL,
+  `varchar1` varchar(255) NOT NULL,
+  `varchar2` varchar(255) NOT NULL,
+  `varchar3` varchar(255) NOT NULL,
+  `varchar4` varchar(255) NOT NULL,
+  `varchar5` varchar(255) NOT NULL,
+  `num1` int(11) NOT NULL,
+  `num2` int(11) NOT NULL,
+  `num3` int(11) NOT NULL,
+  `num4` int(11) NOT NULL,
+  `num5` int(11) NOT NULL,
+  `data1` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `data2` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `data3` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `data4` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `data5` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `bit1` int(1) NOT NULL,
+  `bit2` int(1) NOT NULL,
+  `bit3` int(1) NOT NULL,
+  `bit4` int(1) NOT NULL,
+  `bit5` int(1) NOT NULL,
+  `texto1` longtext NOT NULL,
+  `texto2` longtext NOT NULL,
+  `texto3` longtext NOT NULL,
+  `texto4` longtext NOT NULL,
+  `texto5` longtext NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `tabela` varchar(255) CHARACTER SET latin1 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `opcoes`
 --
 
@@ -143,6 +291,43 @@ INSERT INTO `opcoes` (`id`, `opcao`, `link`, `hover`, `class`, `menu`) VALUES
 (0, 'yahoo', 'www.yahoo.com.br', '', '', '1'),
 (1, 'google', 'www.google.com', '', '', '1'),
 (3, 'microsoft', '', '', '', '2');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `page`
+--
+
+CREATE TABLE `page` (
+  `id` int(11) NOT NULL,
+  `varchar1` varchar(255) NOT NULL,
+  `varchar2` varchar(255) NOT NULL,
+  `varchar3` varchar(255) NOT NULL,
+  `varchar4` varchar(255) NOT NULL,
+  `varchar5` varchar(255) NOT NULL,
+  `num1` int(11) NOT NULL,
+  `num2` int(11) NOT NULL,
+  `num3` int(11) NOT NULL,
+  `num4` int(11) NOT NULL,
+  `num5` int(11) NOT NULL,
+  `data1` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `data2` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `data3` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `data4` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `data5` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `bit1` int(1) NOT NULL,
+  `bit2` int(1) NOT NULL,
+  `bit3` int(1) NOT NULL,
+  `bit4` int(1) NOT NULL,
+  `bit5` int(1) NOT NULL,
+  `texto1` longtext NOT NULL,
+  `texto2` longtext NOT NULL,
+  `texto3` longtext NOT NULL,
+  `texto4` longtext NOT NULL,
+  `texto5` longtext NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `tabela` varchar(255) CHARACTER SET latin1 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -190,57 +375,10 @@ INSERT INTO `tabela` (`id`, `varchar1`, `varchar2`, `varchar3`, `varchar4`, `var
 (7, 'Carlos Manuel', 'carlos@hotmail.com', 'abc1234', '', '', 0, 0, 0, 0, 0, '2017-03-25 02:26:26', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, 0, 0, '', '', '', '', '', '', ''),
 (8, 'Carlos Manuel2', 'carlos@hotmail.com', 'abc1234', '', '', 0, 0, 0, 0, 0, '2017-03-25 02:27:22', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, 0, 0, '', '', '', '', '', '', ''),
 (9, 'Novo Manuel', 'carlos@hotmail.com', 'abc123', '', '', 0, 0, 0, 0, 0, '2017-03-25 03:02:46', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, 0, 0, '', '', '', '', '', '', ''),
-(10, 'hackeado', 'carlos@hotmail.com', 'abc123', '', '', 0, 0, 0, 0, 0, '2017-03-25 03:08:11', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, 0, 0, '', '', '', '', '', 'login', 'cadastrados');
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `tabelaCopiada`
---
-
-CREATE TABLE `tabelaCopiada` (
-  `id` int(11) NOT NULL,
-  `varchar1` varchar(255) NOT NULL,
-  `varchar2` varchar(255) NOT NULL,
-  `varchar3` varchar(255) NOT NULL,
-  `varchar4` varchar(255) NOT NULL,
-  `varchar5` varchar(255) NOT NULL,
-  `num1` int(11) NOT NULL,
-  `num2` int(11) NOT NULL,
-  `num3` int(11) NOT NULL,
-  `num4` int(11) NOT NULL,
-  `num5` int(11) NOT NULL,
-  `data1` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `data2` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `data3` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `data4` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `data5` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `bit1` int(1) NOT NULL,
-  `bit2` int(1) NOT NULL,
-  `bit3` int(1) NOT NULL,
-  `bit4` int(1) NOT NULL,
-  `bit5` int(1) NOT NULL,
-  `texto1` longtext NOT NULL,
-  `texto2` longtext NOT NULL,
-  `texto3` longtext NOT NULL,
-  `texto4` longtext NOT NULL,
-  `texto5` longtext NOT NULL,
-  `alias` varchar(255) NOT NULL,
-  `tabela` varchar(255) CHARACTER SET latin1 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `tabelaCopiada`
---
-
-INSERT INTO `tabelaCopiada` (`id`, `varchar1`, `varchar2`, `varchar3`, `varchar4`, `varchar5`, `num1`, `num2`, `num3`, `num4`, `num5`, `data1`, `data2`, `data3`, `data4`, `data5`, `bit1`, `bit2`, `bit3`, `bit4`, `bit5`, `texto1`, `texto2`, `texto3`, `texto4`, `texto5`, `alias`, `tabela`) VALUES
-(5, 'Pedro Henrique', 'maria@email.com', 'novasenha', '', '', 0, 0, 0, 0, 0, '2017-03-25 02:19:19', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, 0, 0, '', '', '', '', '', '', ''),
-(7, 'Carlos Manuel', 'carlos@hotmail.com', 'abc1234', '', '', 0, 0, 0, 0, 0, '2017-03-25 02:26:26', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, 0, 0, '', '', '', '', '', '', ''),
-(8, 'Carlos Manuel2', 'carlos@hotmail.com', 'abc1234', '', '', 0, 0, 0, 0, 0, '2017-03-25 02:27:22', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, 0, 0, '', '', '', '', '', '', ''),
-(9, 'Novo Manuel', 'carlos@hotmail.com', 'abc123', '', '', 0, 0, 0, 0, 0, '2017-03-25 03:02:46', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, 0, 0, '', '', '', '', '', '', ''),
-(10, '123456789', 'FinalnovffoUsuarioFiltrado', 'novoemail@gmailc.om', 'mais1@mail.com', 'valor 2', 0, 0, 0, 0, 0, '2017-05-26 16:59:37', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, 0, 0, '', '', '', '', '', 'login', 'cadastrados'),
-(11, '123456789', 'novoDadoInserido', 'novoemail@gmailc.om', 'MAISmais1@mail.com', 'novoValor', 0, 0, 0, 0, 0, '2017-05-26 17:04:09', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, 0, 0, '', '', '', '', '', '', '222usuario2'),
-(12, '123456789', 'TestandoNovoDadoInserido', 'novoemail@gmailc.om', 'MAISmais1@mail.com', 'novoValor', 0, 0, 0, 0, 0, '2017-05-26 17:07:15', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, 0, 0, '', '', '', '', '', '', '222usuario2');
+(10, 'hackeado', 'carlos@hotmail.com', 'abc123', '', '', 0, 0, 0, 0, 0, '2017-03-25 03:08:11', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, 0, 0, '', '', '', '', '', 'login', 'cadastrados'),
+(11, 'kkk6789', 'filtro5', 'kkkil@gmailc.om', 'kkkSmais1@mail.com', 'kkkkkalor', 0, 0, 0, 0, 0, '2017-06-12 15:48:51', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, 0, 0, '', '', '', '', '', '', 'filtro'),
+(12, 'kkk6789', 'filtro5', 'kkkil@gmailc.om', 'kkkSmais1@mail.com', 'kkkkkalor', 0, 0, 0, 0, 0, '2017-06-12 15:49:50', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, 0, 0, '', '', '', '', '', '', 'filtro'),
+(13, 'kkk6789', 'filtro5', 'kkkil@gmailc.om', 'kkkSmais1@mail.com', 'kkkkkalor', 0, 0, 0, 0, 0, '2017-06-12 15:49:55', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, 0, 0, '', '', '', '', '', '', 'filtro');
 
 --
 -- Indexes for dumped tables
@@ -253,9 +391,27 @@ ALTER TABLE `cadastro`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `comment_post`
+--
+ALTER TABLE `comment_post`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `feed`
+--
+ALTER TABLE `feed`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `membros`
 --
 ALTER TABLE `membros`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `menssage`
+--
+ALTER TABLE `menssage`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -265,21 +421,27 @@ ALTER TABLE `menu`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `modelo`
+--
+ALTER TABLE `modelo`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `opcoes`
 --
 ALTER TABLE `opcoes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tabela`
+-- Indexes for table `page`
 --
-ALTER TABLE `tabela`
+ALTER TABLE `page`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tabelaCopiada`
+-- Indexes for table `tabela`
 --
-ALTER TABLE `tabelaCopiada`
+ALTER TABLE `tabela`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -292,30 +454,50 @@ ALTER TABLE `tabelaCopiada`
 ALTER TABLE `cadastro`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
+-- AUTO_INCREMENT for table `comment_post`
+--
+ALTER TABLE `comment_post`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `feed`
+--
+ALTER TABLE `feed`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `membros`
 --
 ALTER TABLE `membros`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `menssage`
+--
+ALTER TABLE `menssage`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
+-- AUTO_INCREMENT for table `modelo`
+--
+ALTER TABLE `modelo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `opcoes`
 --
 ALTER TABLE `opcoes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
+-- AUTO_INCREMENT for table `page`
+--
+ALTER TABLE `page`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `tabela`
 --
 ALTER TABLE `tabela`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
---
--- AUTO_INCREMENT for table `tabelaCopiada`
---
-ALTER TABLE `tabelaCopiada`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

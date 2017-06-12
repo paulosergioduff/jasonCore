@@ -1,6 +1,6 @@
 <?php
 
-function typeData($protocol, $serverOrigin, $serverDestiny, $type, $autor, $menssage)
+function typeDataInsert($protocol, $serverOrigin, $serverDestiny, $type, $autor, $menssage)
 	{
 		if ($type == 'multitonPDO') {
 			$crud = crud::getInstance(Conexao::getInstanceMultiton("$serverOrigin"));
