@@ -6,8 +6,7 @@ Class JasonPost extends Post
                 ################################# CUIDADO!!!!! ################################################
                 
                 EMBORA APARENTE QUE SEJA POSSÍVEL USAR UMA FUNÇÃO SÓ PARA PARA OS ENVIOS DE MENSAGEM, TENHA EM
-                MENTE QUE ESSA CLASSE NÃO FOI 'PLANEJADA' SOMENTE PARA BANCO DE DADOS MYSQL, MAS ARQUIVO DE TEX
-                TO JSON TAMBÉM
+                MENTE QUE ESSA CLASSE NÃO FOI 'PLANEJADA' SOMENTE PARA BANCO DE DADOS MYSQL, MAS ARQUIVO DE DADOS JSON TAMBÉM (AINDA NÃO IMPLEMENTADO EM 13/06/2017)
                 ################################# CUIDADO!!!!! ################################################
                 
                 */
@@ -32,11 +31,12 @@ Class JasonPost extends Post
                                                 $crud->insert($autor, $menssage, $protocol, $target, $nat, 'page', 'page');
                                 }
                 }
-                public function send_Menssage($protocol, $serverOrigin, $serverDestiny, $type, $autor, $menssage)
+               public function send_Menssage($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage)
                 {
-                                //typeDataInsert($protocol, $serverOrigin, $serverDestiny, $type, $autor, $menssage);
-                                $crud = crud::getInstance(Conexao::getInstanceMultiton("$serverOrigin"));
-                                $crud->insert($autor, $menssage, $protocol, $type, '*****', 'menssagem', 'menssage');
+                                if ($type == 'multitonPDO') {
+                                                $crud = crud::getInstance(Conexao::getInstanceMultiton("$serverOrigin"));
+                                                $crud->insert($autor, $menssage, $protocol, $target, $nat, 'feed', 'menssage');
+                                }
                 }
                 public function update_inbox($protocol, $serverOrigin, $serverDestiny, $type, $autor, $menssage)
                 {

@@ -18,17 +18,16 @@ $postagem = new JasonPost();
 
 $protocolo = 'https';
 $servidorDeOrigem = 'jasonBD';
-$servidorDeDestino = 'feed';
+$servidorDeDestino = 'comment_post';
 $tipo = 'multitonPDO';
 $autor = 'Paulo Sérgio Duff';
 $menssagem = 'Segundo post da minha fanpage';
 
 
 
-$natureza = "GALERÃO";
+$natureza = "NOVO DADO 2";
 $destinatario = '02';
 
-//$postagem->send_Menssage($protocolo, $servidorDeOrigem, $servidorDeDestino , $tipo, $autor, $menssagem);
 //$postagem->send_Menssage($protocolo, $servidorDeOrigem, $servidorDeDestino , $destinatario, $tipo, $natureza, $autor, $menssagem);
 
 //$postagem->post_feed($protocolo, $servidorDeOrigem, $servidorDeDestino , $destinatario, $tipo, $natureza, $autor, $menssagem);

@@ -1,13 +1,14 @@
 # Jason Kernel 1.0
 
- Jason Kernel é um núcleo de aplicação para criação de microframeworks, protótipos e APIs. Propõe solucionar os seguintes problemas de mercado :
+ Jason Kernel é um núcleo de aplicação para criação de microframeworks, protótipos, redes sociais e APIs. Propõe solucionar os seguintes problemas de mercado :
 
   - Principais rotinas envolvendo banco de dados (CRUD).
   - Atender exigências de compatibilidade com versões mais recentes do PHP (até a publicação deste documento, o PHP7).
   - Facilidade em menutenção de núcleo das aplicações.
   - Adaptação na maior variedade de projetos possíveis, com tabela de campos mais abstratos.
   - Facilidade em migração tanto de métodos quanto diferentes banco de dados do mercado.
-  - Criação de rápidos protótipos 
+  - Criação de rápidos protótipos
+  - Inserção de funções de redes sociais em sites e aplicativos.
 
 # Vantagens e recursos:
 
@@ -98,6 +99,27 @@ $dados = $crud->selecionaId('numero_id', $dbTabela);
 ```
 
 ### SELECT DE UM CAMPO:
+```PHP
+$campo = 'termoDeBusca'; 
+$coluna = 'campoSelecionado';
+
+$dados = $crud->selecionaCampo($dbTabela);
+if ($controleSelect != false) {
+                foreach ($dados as $reg):
+                                
+                                $filtro = $reg->$coluna;
+                                  if ($filtro == $campo) {
+                                    echo $id        = $reg->id . "<br>";
+                                echo $varchar1  = $reg->varchar1 . "<br>";
+                                echo $varchar2 = $reg->varchar2 . "<br>";
+                                  }
+                                
+                endforeach;
+               ;
+}
+```
+
+### EXEMPLO DE RECURSO DE REDES SOCIAIS (POSTAGEM):
 ```PHP
 $campo = 'termoDeBusca'; 
 $coluna = 'campoSelecionado';

@@ -2,7 +2,7 @@
 interface JasonCore
 {
 				/*public function dataAccess($protocol, $type, $server, $dataBase, $user, $password); // Conection to data base*/
-				public function send_Menssage($protocol, $serverOrigin, $serverDestiny, $type, $autor, $menssage);
+				public function send_Menssage($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage);
 				public function update_inbox($protocol, $serverOrigin, $serverDestiny, $type, $autor, $menssage);
 }
 abstract Class WhiteList implements JasonCore
@@ -38,7 +38,7 @@ abstract Class Post implements JasonCore
 				public $destiny;
 				public abstract function post_feed($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage);
 				public abstract function post_comment($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage);
-				public abstract function post_in_page($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage);
+				public abstract function send_Menssage($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage);
 }
 abstract Class React implements JasonCore
 {
@@ -51,7 +51,7 @@ abstract Class PrivatePost implements JasonCore
 {
 				private $author;
 				private $destiny;
-				public abstract function send_Menssage($protocol, $serverOrigin, $serverDestiny, $type, $autor, $menssage);
+				public abstract function send_Menssage($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage);
 				public abstract function update_inbox($protocol, $serverOrigin, $serverDestiny, $type, $autor, $menssage);
 				public abstract function status();
 }
