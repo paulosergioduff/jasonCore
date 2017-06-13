@@ -121,23 +121,23 @@ if ($controleSelect != false) {
 
 ### EXEMPLO DE RECURSO DE REDES SOCIAIS (POSTAGEM):
 ```PHP
-$campo = 'termoDeBusca'; 
-$coluna = 'campoSelecionado';
 
-$dados = $crud->selecionaCampo($dbTabela);
-if ($controleSelect != false) {
-                foreach ($dados as $reg):
-                                
-                                $filtro = $reg->$coluna;
-                                  if ($filtro == $campo) {
-                                    echo $id        = $reg->id . "<br>";
-                                echo $varchar1  = $reg->varchar1 . "<br>";
-                                echo $varchar2 = $reg->varchar2 . "<br>";
-                                  }
-                                
-                endforeach;
-               ;
-}
+$postagem = new JasonPost();
+
+$protocolo = 'https';
+$servidorDeOrigem = 'jasonBD';
+$servidorDeDestino = 'comment_post';
+$tipo = 'multitonPDO';
+$autor = 'Paulo Sérgio Duff';
+$menssagem = 'Segundo post da minha fanpage';
+
+
+
+$natureza = "NOVO DADO 2";
+$destinatario = '02';
+
+$postagem->send_Menssage($protocolo, $servidorDeOrigem, $servidorDeDestino , $destinatario, $tipo, $natureza, $autor, $menssagem);
+
 ```
 ### TABELA A SER USADA:
 ```SQL
