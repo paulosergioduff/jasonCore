@@ -21,14 +21,16 @@ $servidorDeOrigem = 'jasonBD';
 $servidorDeDestino = 'comment_post';
 $tipo = 'multitonPDO';
 $autor = 'Paulo Sérgio Duff';
-$menssagem = 'Segundo post da minha fanpage';
+$menssagem = 'Segundo post da minha fanpage 33';
+
+$natureza = "NOVO DADO 3";;
 
 
 
-$natureza = "NOVO DADO 2";
+ 
 $destinatario = '02';
 
-//$postagem->send_Menssage($protocolo, $servidorDeOrigem, $servidorDeDestino , $destinatario, $tipo, $natureza, $autor, $menssagem);
+$postagem->send_Menssage($protocolo, $servidorDeOrigem, $servidorDeDestino , $destinatario, $tipo, $natureza, $autor, $menssagem);
 
 //$postagem->post_feed($protocolo, $servidorDeOrigem, $servidorDeDestino , $destinatario, $tipo, $natureza, $autor, $menssagem);
 

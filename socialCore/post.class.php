@@ -10,32 +10,12 @@ Class JasonPost extends Post
                 ################################# CUIDADO!!!!! ################################################
                 
                 */
-                public function post_feed($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage)
-                {
-                                if ($type == 'multitonPDO') {
-                                                $crud = crud::getInstance(Conexao::getInstanceMultiton("$serverOrigin"));
-                                                $crud->insert($autor, $menssage, $protocol, $target, $nat, 'feed', 'feed');
-                                }
-                }
-                public function post_comment($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage)
-                {
-                                if ($type == 'multitonPDO') {
-                                                $crud = crud::getInstance(Conexao::getInstanceMultiton("$serverOrigin"));
-                                                $crud->insert($autor, $menssage, $protocol, $target, $nat, 'comment', 'comment_post');
-                                }
-                }
-                public function post_in_page($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage)
-                {
-                                if ($type == 'multitonPDO') {
-                                                $crud = crud::getInstance(Conexao::getInstanceMultiton("$serverOrigin"));
-                                                $crud->insert($autor, $menssage, $protocol, $target, $nat, 'page', 'page');
-                                }
-                }
+              
                public function send_Menssage($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage)
                 {
                                 if ($type == 'multitonPDO') {
                                                 $crud = crud::getInstance(Conexao::getInstanceMultiton("$serverOrigin"));
-                                                $crud->insert($autor, $menssage, $protocol, $target, $nat, 'feed', 'menssage');
+                                                $crud->insert($autor, $menssage, $protocol, $target, $nat, 'feed', $serverDestiny);
                                 }
                 }
                 public function update_inbox($protocol, $serverOrigin, $serverDestiny, $type, $autor, $menssage)
@@ -65,5 +45,27 @@ Class JasonPost extends Post
                                 }
                                }
                 }
+
+                /*  public function post_feed($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage)
+                {
+                                if ($type == 'multitonPDO') {
+                                                $crud = crud::getInstance(Conexao::getInstanceMultiton("$serverOrigin"));
+                                                $crud->insert($autor, $menssage, $protocol, $target, $nat, 'feed', 'feed');
+                                }
+                }
+                public function post_comment($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage)
+                {
+                                if ($type == 'multitonPDO') {
+                                                $crud = crud::getInstance(Conexao::getInstanceMultiton("$serverOrigin"));
+                                                $crud->insert($autor, $menssage, $protocol, $target, $nat, 'comment', 'comment_post');
+                                }
+                }
+                public function post_in_page($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage)
+                {
+                                if ($type == 'multitonPDO') {
+                                                $crud = crud::getInstance(Conexao::getInstanceMultiton("$serverOrigin"));
+                                                $crud->insert($autor, $menssage, $protocol, $target, $nat, 'page', 'page');
+                                }
+                }*/
 }
 ?>

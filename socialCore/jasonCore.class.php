@@ -36,9 +36,12 @@ abstract Class Post implements JasonCore
 				public $value;
 				public $author;
 				public $destiny;
-				public abstract function post_feed($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage);
-				public abstract function post_comment($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage);
+				public $typePost; // tipo e natureza do post
 				public abstract function send_Menssage($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage);
+				/*
+				public abstract function post_feed($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage);
+				public abstract function post_comment($protocol, $serverOrigin, $serverDestiny, $target, $type, $nat, $autor, $menssage);*/
+				
 }
 abstract Class React implements JasonCore
 {
@@ -55,4 +58,6 @@ abstract Class PrivatePost implements JasonCore
 				public abstract function update_inbox($protocol, $serverOrigin, $serverDestiny, $type, $autor, $menssage);
 				public abstract function status();
 }
+
+
 ?>
