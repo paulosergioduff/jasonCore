@@ -1,4 +1,4 @@
-<?php
+<?php error_reporting(0);
 /*  
  * Classe para operações CRUD na tabela tabela   
  * Estudar criação de tabelas em PDO https://www.todoespacoonline.com/w/2014/10/como-criar-bases-de-dados-e-tabelas-com-pdo/
@@ -47,7 +47,7 @@ class crud
                                                                 $stm->bindValue(5, $valor2);
                                                                 $stm->bindValue(6, $tabela);
                                                                 $stm->execute();
-                                                                retornoInsert();
+                                                                //retornoInsert();
                                                 }
                                                 catch (PDOException $erro) {
                                                                 echo "<script>alert('Erro na linha: {$erro->getLine()}')</script>";
@@ -74,7 +74,7 @@ class crud
                                                                 $stm->bindValue(5, $valor2);
                                                                 $stm->bindValue(6, $id);
                                                                 $stm->execute();
-                                                                retornoUpdate();
+                                                                //retornoUpdate();
                                                 }
                                                 catch (PDOException $erro) {
                                                                 echo "<script>alert('Erro na linha: {$erro->getLine()}')</script>";
@@ -93,7 +93,7 @@ class crud
                                                                 $stm = $this->pdo->prepare($sql);
                                                                 $stm->bindValue(1, $id);
                                                                 $stm->execute();
-                                                                retornoDelete();
+                                                                //retornoDelete();
                                                 }
                                                 catch (PDOException $erro) {
                                                                 echo "<script>alert('Erro na linha: {$erro->getLine()}')</script>";
