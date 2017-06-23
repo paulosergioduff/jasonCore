@@ -14,7 +14,8 @@ Class JasonPost extends Post
                 {
                                 if ($type == 'multitonPDO') {
                                                 $crud = crud::getInstance(Conexao::getInstanceMultiton("$serverOrigin"));
-                                                $crud->insert($autor, $menssage, $protocol, $target, $nat, 'feed', $serverDestiny);
+                                                $sqlMenssage = addslashes($menssage) ;
+                                                $crud->insert($autor, $sqlMenssage, $protocol, $target, $nat, 'feed', $serverDestiny);
                                 }
                 }
                 public function update_inbox($protocol, $serverOrigin, $serverDestiny, $type, $autor, $menssage)

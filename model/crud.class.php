@@ -54,6 +54,30 @@ class crud
                                                 }
                                 endif;
                 }
+
+                  public function insertX($varchar2, $varchar3, $varchar1, $valor1, $valor2, $tabela, $dbTabela, $nomeDoPadrao)
+                {
+                                if (!empty($varchar2) && !empty($varchar3) && !empty($varchar1)):
+                                                try {
+                                                                $sql = "INSERT INTO $dbTabela (varchar2, varchar3, varchar1, varchar4, varchar5, tabela, varchar6) VALUES (?, ?, ?, ?, ?, ?, ?)";
+                                                                $stm = $this->pdo->prepare($sql);
+                                                                $stm->bindValue(1, $varchar2);
+                                                                $stm->bindValue(2, $varchar3);
+                                                                $stm->bindValue(3, $varchar1);
+                                                                $stm->bindValue(4, $valor1);
+                                                                $stm->bindValue(5, $valor2);
+                                                                $stm->bindValue(6, $tabela);
+                                                                $stm->bindValue(7, $nomeDoPadrao);
+                                                                $stm->execute();
+                                                                //retornoInsert();
+                                                }
+                                                catch (PDOException $erro) {
+                                                                echo "<script>alert('Erro na linha: {$erro->getLine()}')</script>";
+                                                }
+                                endif;
+                }
+
+
                 /*   
                  * Metodo para edição de registros   
                  * @param $varchar2 - Valor para o campo varchar2   
