@@ -55,7 +55,7 @@ class crud
                                 endif;
                 }
 
-                  public function insertX($varchar2, $varchar3, $varchar1, $valor1, $valor2, $tabela, $dbTabela, $nomeDoPadrao)
+                  public function insertX($varchar2, $varchar3, $varchar1, $valor1, $valor2, $tabela, $dbTabela, $nomeDoPadrao) // Função especial para um projeto da empresa que trabalho
                 {
                                 if (!empty($varchar2) && !empty($varchar3) && !empty($varchar1)):
                                                 try {

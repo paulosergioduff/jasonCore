@@ -2,7 +2,7 @@
 /* Constantes de parâmetros para configuração da conexão   
  */
 define('SERVIDOR', 'localhost');
-define('NOMEDB', 'abstrato');
+define('NOMEDB', 'jasonBD');
 define('CHARSET', 'utf8');
 define('USUARIO', 'root');
 define('SENHA', '');
