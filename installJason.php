@@ -9,7 +9,7 @@ define('CONTROL', 'control');
 define('MODEL', 'model');
 define('VIEW', 'view');
 define('CORE', 'socialCore');
-define('CLASSAUX', 'aux');
+define('CLASSAUX', 'auxw');
 
 
 
